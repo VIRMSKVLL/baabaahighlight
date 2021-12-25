@@ -1,0 +1,67 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BaaBaa",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#properties"
+		},
+		{
+			"include": "#commands"
+		}
+	],
+	"repository": {
+		
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.control.baabaa",
+				"match": "\\b(if|else|is|are|endif)\\b"
+			},
+			{
+				"name": "comment.line",
+				"match": ">>.+"
+			}
+		]
+		},
+		
+		"properties": {
+			"patterns": [
+				{
+					"name": "constant.control.baabaa",
+					"match": "\\b(trigger|move_animation|stop_animation|name|hue|direction|step|blending|opacity|type|speed|frequency|switch|variable|direction_fix|through|always_on_top|id|x|y|window|position|choices|cancel)\\b"
+				},
+				{
+					"name": "entity.name.tag",
+					"match": "\\b(fixed|on|normal|add|subtract|down|left|right|up|action|playertouch|eventtouch|autorun|parallel|true|false|>|<|hidden|shown|middle|upper|lower)"
+				}
+			]
+		},
+
+		"commands": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b(say)\\b"
+				},
+				{
+					"name": "string.quoted",
+					"match": "\\\".+\\\""
+				},
+				{
+					"name": "support.property-value",
+					"match": "[0-9]+"
+				},
+				{
+					"name": "entity.name.class",
+					"match": "(\\$[A-z0-9]+|end[A-z0-9]+)\\b"
+				}
+			]
+		}
+
+
+	},
+	"scopeName": "source.baabaa"
+}

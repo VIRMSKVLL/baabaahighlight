@@ -1,0 +1,25 @@
+{
+    "name": "baabaahighlight",
+    "displayName": "BaaBaa Syntax Highlight",
+    "description": "Highlights the Syntax for BaaBaa",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "baabaa",
+            "aliases": ["BaaBaa", "baabaa"],
+            "extensions": [".baba"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "baabaa",
+            "scopeName": "source.baabaa",
+            "path": "./syntaxes/baabaa.tmLanguage.json"
+        }]
+    }
+}
